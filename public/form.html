@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Test Form</title>
+</head>
 <body>
-  <!-- This hidden form is for Netlify to detect during build -->
-  <form name="astrology-consultation" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <input type="date" name="birthdate" />
-    <input type="time" name="birthtime" />
-    <input type="text" name="birthplace" />
-    <textarea name="questions"></textarea>
-  </form>
+    <h1>Simple Test Form</h1>
+    <form name="simple-test" method="POST" data-netlify="true">
+        <p>
+            <label>Your Name: <input type="text" name="name" required /></label>
+        </p>
+        <p>
+            <label>Your Email: <input type="email" name="email" required /></label>
+        </p>
+        <p>
+            <button type="submit">Send Test</button>
+        </p>
+    </form>
 </body>
 </html>
