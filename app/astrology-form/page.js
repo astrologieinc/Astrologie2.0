@@ -1,3 +1,5 @@
+'use client';
+
 export default function AstrologyForm() {
   return (
     <div style={{ padding: '40px', maxWidth: '600px', margin: '0 auto' }}>
@@ -7,6 +9,7 @@ export default function AstrologyForm() {
         name="astrology-consultation" 
         method="POST" 
         data-netlify="true"
+        action="/success"
       >
         <input type="hidden" name="form-name" value="astrology-consultation" />
         
