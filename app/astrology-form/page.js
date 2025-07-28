@@ -1,17 +1,5 @@
 'use client';
 export default function AstrologyForm() {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    });
-    
-    window.location.href = '/success';
-  };
   return (
     <div style={{ padding: '40px', maxWidth: '600px', margin: '0 auto' }}>
       <h1>Astrology Consultation Form</h1>
@@ -21,7 +9,6 @@ export default function AstrologyForm() {
         method="POST" 
         data-netlify="true"
         action="/success"
-        onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="astrology-consultation" />
         
