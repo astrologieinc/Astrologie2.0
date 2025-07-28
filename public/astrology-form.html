@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology Consultation Form</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #0070f3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0051cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Astrology Consultation Form</h1>
+    
+    <form name="astrology-consultation" method="POST" data-netlify="true" action="/success">
+        <input type="hidden" name="form-name" value="astrology-consultation">
+        
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="birthtime">Birth Time:</label>
+            <input type="time" id="birthtime" name="birthtime" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="birthplace">Birth Place:</label>
+            <input type="text" id="birthplace" name="birthplace" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="questions">Questions:</label>
+            <textarea id="questions" name="questions" rows="4"></textarea>
+        </div>
+        
+        <button type="submit">Submit Consultation Request</button>
+    </form>
+</body>
+</html>
